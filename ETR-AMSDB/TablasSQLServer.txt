@@ -1,0 +1,81 @@
+create table AMS_Proyectos (
+IDProy int IDENTITY(1,1),
+NomProy varchar(255),
+PRIMARY KEY (IDProy));
+
+
+INSERT INTO AMS_Proyectos (NomProy) values ('ProyAMS');
+
+
+create table AMS_TipActs ( 
+NTipoAct int NOT NULL IDENTITY(1,1),
+TipoAct varchar (255),
+primary key (NTipoAct));
+
+
+INSERT INTO AMS_TipActs (TipoAct) values ('Persona');
+
+
+create table AMS_ActEquipos(
+SerialNumber varchar (100) NOT NULL,
+TipoAct Int NOT NULL,
+Marca varchar (50),
+Modelo varchar (50),
+SO varchar (50),
+ArquitecturaSO varchar (10),
+IDProy int NOT NULL,
+Primary Key (SerialNumber),
+FOREIGN KEY (TipoAct) REFERENCES AMS_TipActs(NTipoAct),
+FOREIGN KEY (IDProy) REFERENCES AMS_Proyectos(IDProy));
+
+
+create table AMS_ActFinanc (
+SerialNumber varchar (100) NOT NULL,
+TipoAct INT NOT NULL,
+CostoAct INT NOT NULL,
+GarantAct varchar (5),
+ActIngDate varchar (100),
+ActFinDate varchar (100),
+IDProy int NOT NULL,
+PRIMARY KEY (SerialNumber), 
+FOREIGN KEY (TipoAct) REFERENCES AMS_TipActs(NTipoAct),
+FOREIGN KEY (IDProy) REFERENCES AMS_Proyectos(IDProy));
+
+
+CREATE TABLE AMS_GenActivos 
+( 
+SerialNumber varchar(255) NOT NULL,  
+TipoAct int NOT NULL,
+IDProy int NOT NULL, 
+PRIMARY KEY (SerialNumber), 
+FOREIGN KEY (TipoAct) REFERENCES AMS_TipActs(NTipoAct),
+FOREIGN KEY (IDProy) REFERENCES AMS_Proyectos(IDProy));
+
+INSERT INTO AMS_GenActivos values ('AMSX','1','1');
+
+
+create table AMS_Adminusers (
+SerialNumber varchar(255),
+NomUser varchar (255) NOT NULL,
+AliUser varchar (50) NOT NULL,
+PassUser varchar (50) NOT NULL,
+IDProy int NOT NULL,
+Primary key (SerialNumber),
+FOREIGN KEY (IDProy) REFERENCES AMS_Proyectos(IDProy));
+
+
+INSERT INTO AMS_Adminusers values ('AMSZ','AMS Administrador','AMS-ADMIN','c13ddfb2bbb4d880b276934dea15bfb6352bc40f','1');
+
+
+create table AMS_Usuarios (
+SerialNumber varchar(255) NOT NULL,
+NomUser varchar (255) NOT NULL,
+AliUser varchar (50) NOT NULL,
+PassUser varchar (50) NOT NULL,
+IDProy int NOT NULL,
+Primary key (SerialNumber),
+FOREIGN key (SerialNumber) references AMS_GenActivos(SerialNumber),
+FOREIGN KEY (IDProy) REFERENCES AMS_Proyectos(IDProy));
+
+INSERT INTO AMS_Usuarios values ('AMSX','AMS Usuario','AMS-USER','c13ddfb2bbb4d880b276934dea15bfb6352bc40f','1');
+
