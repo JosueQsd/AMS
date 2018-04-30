@@ -9,7 +9,7 @@ include("BDConfig.php");
 
 if ($_SESSION['loggedin'] == true){
 
-if ($_SESSION['tipUsr'] == true){
+if ($_SESSION['tipUsr'] == 3){
   echo "Bienvenido Admin! " . $_SESSION['username'];
   $segundos = time();
   $tiempo_transcurrido = $segundos;
@@ -19,6 +19,7 @@ if ($_SESSION['tipUsr'] == true){
   }else{
   $_SESSION['inicio'] = time();
   }
+  $SESSION = true;
   if ($tiempo_transcurrido <= $tiempo_maximo){
 ?>
 <body onload = "Admin ()">
@@ -29,7 +30,7 @@ if ($_SESSION['tipUsr'] == true){
 
 
 
-}else{
+}else if($_SESSION['tipUsr'] == 1){
   echo "Bienvenido Usuario! " . $_SESSION['username'];
   $segundos = time();
   $tiempo_transcurrido = $segundos;
@@ -42,6 +43,23 @@ if ($_SESSION['tipUsr'] == true){
   ?>
   <body onload = "User ()">
   <div id = "MenuUser">
+  </div>
+  <?php
+
+}else if($_SESSION['tipUsr'] == 2){
+
+  echo "Bienvenido Especialista! " . $_SESSION['username'];
+  $segundos = time();
+  $tiempo_transcurrido = $segundos;
+  $tiempo_maximo = $_SESSION['inicio']  + ( $_SESSION['intervalo'] * 60 ) ;
+  if($tiempo_transcurrido > $tiempo_maximo){
+  header('location: index.php');
+  }else{
+  $_SESSION['inicio'] = time();
+  }
+  ?>
+  <body onload = "Special ()">
+  <div id = "MenuSpecial">
   </div>
   <?php
 }
