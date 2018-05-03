@@ -1,11 +1,12 @@
 create table AMS_Proyectos (
 IDProy int(11) auto_increment,
 NomProy varchar(255),
+CodEmp varchar (255),
 PRIMARY KEY (IDProy));
 
 ALTER TABLE AMS_Proyectos AUTO_INCREMENT = 1;
 
-INSERT INTO AMS_Proyectos (NomProy) values ('ProyAMS');
+INSERT INTO AMS_Proyectos (NomProy,CodEmp) values ('ProyAMS','770eb2d5a1541d54d52b3caa9f5f08a761917d30');
 
 
 create table AMS_TipActs ( 
@@ -61,12 +62,13 @@ SerialNumber varchar(255),
 NomUser varchar (255) NOT NULL,
 AliUser varchar (50) NOT NULL,
 PassUser varchar (50) NOT NULL,
+Correo varchar (255),
 IDProy int(11) NOT NULL,
 Primary key (SerialNumber),
 FOREIGN KEY (IDProy) REFERENCES AMS_Proyectos(IDProy));
 
 
-INSERT INTO AMS_Adminusers values ('AMSZ','AMS Administrador','AMS-ADMIN','c13ddfb2bbb4d880b276934dea15bfb6352bc40f','1');
+INSERT INTO AMS_Adminusers values ('AMSZ','AMS Administrador','AMS-ADMIN','c13ddfb2bbb4d880b276934dea15bfb6352bc40f','ryvqsd@gmail.com','1');
 
 
 create table AMS_Usuarios (
@@ -74,10 +76,25 @@ SerialNumber varchar(255) NOT NULL,
 NomUser varchar (255) NOT NULL,
 AliUser varchar (50) NOT NULL,
 PassUser varchar (50) NOT NULL,
+Correo varchar (255),
 IDProy int(11) NOT NULL,
 Primary key (SerialNumber),
 FOREIGN key (SerialNumber) references AMS_GenActivos(SerialNumber),
 FOREIGN KEY (IDProy) REFERENCES AMS_Proyectos(IDProy));
 
-INSERT INTO AMS_Usuarios values ('AMSX','AMS Usuario','AMS-USER','c13ddfb2bbb4d880b276934dea15bfb6352bc40f','1');
+INSERT INTO AMS_Usuarios values ('AMSX','AMS Usuario','AMS-USER','c13ddfb2bbb4d880b276934dea15bfb6352bc40f','ryvqsd@gmail.com','1');
+
+
+create table AMS_SpecialUsers (
+SerialNumber varchar(255),
+NomUser varchar (255) NOT NULL,
+AliUser varchar (50) NOT NULL,
+PassUser varchar (50) NOT NULL,
+Correo varchar (255),
+IDProy int(11) NOT NULL,
+Primary key (SerialNumber),
+FOREIGN KEY (IDProy) REFERENCES AMS_Proyectos(IDProy));
+
+INSERT INTO AMS_SpecialUsers values ('AMSY','AMS Especialista','AMS-SPECIAL','c13ddfb2bbb4d880b276934dea15bfb6352bc40f','ryvqsd@gmail.com','1');
+
 
