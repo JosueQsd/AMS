@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 include("BDConfig.php");
 
 $user = $_POST['User'];
@@ -48,7 +48,7 @@ header("Location: AMSMenu.php");
 }else{
   echo ("<script LANGUAGE='JavaScript'>
     window.alert('Usuario o Contraseña Incorrectos');
-    window.location.href='http://10.20.60.158/AMS';
+    window.location.href='http://10.20.60.158:8080/AMS';
     </script>");
    exit();
  }
