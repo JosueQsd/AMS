@@ -23,7 +23,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-md navbar-dark" style= "background-color: #292c80;">
+<nav class="navbar navbar-expand-md navbar-dark" style = "background-color: #292c80;">
   <a class="navbar-brand" href="#">AMS-SOFTWARE</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
@@ -31,73 +31,50 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link active" href="#">Pagina Principal</a>
+        <a class="nav-link" href="http://10.20.60.158:8080/AMS/index.php">Pagina Principal</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="http://10.20.60.158:8080/AMS/noticias.php">Noticias</a>
+        <a class="nav-link active" href="#">Noticias</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Contacto</a>
       </li>
     </ul>
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-        <li class="nav-item nav-right mr-md-2"><a class="nav-link" href="#popup1"><i class="material-icons">perm_identity</i> Iniciar Sesión</a></li>
-        <li class="nav-item nav-right mr-md-2"><a class="nav-link" href="#popup2"><i class="material-icons">receipt</i> Registrarse</a></li>
+      <li class="nav-item nav-right mr-md-2"><a class="nav-link" href="#popup1"><i class="material-icons">perm_identity</i> Iniciar Sesión</a></li>
+      <li class="nav-item nav-right mr-md-2"><a class="nav-link" href="#popup2"><i class="material-icons">receipt</i> Registrarse</a></li>
       </ul>
   </div>
 </nav>
 
 
-
-<div id="demo" class="carousel slide" data-ride="carousel">
-
-  <!-- Indicators -->
-  <ul class="carousel-indicators">
-    <li data-target="#demo" data-slide-to="0" class="active"></li>
-    <li data-target="#demo" data-slide-to="1"></li>
-    <li data-target="#demo" data-slide-to="2"></li>
-    <li data-target="#demo" data-slide-to="3"></li>
-  </ul>
-
-  <!-- The slideshow -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="Resources/1.jpg" alt="Imagen 1">
-      <div class="carousel-caption">
-   <h3>AMS-SOFTWARE</h3>
-   <p>Active Management Solution</p>
-   <p>Control de activos al alcance de sus manos</p>
- </div>
+<div class="container" style="margin-top:30px">
+  <div class="row">
+    <div class="col-sm-4">
+      <h2>About Me</h2>
+      <h5>Photo of me:</h5>
+      <div class="fakeimg">Fake Image</div>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+      <h3>Some Links</h3>
+      <p>Lorem ipsum dolor sit ame.</p>
+      <hr class="d-sm-none">
     </div>
-    <div class="carousel-item">
-      <img src="Resources/2.jpg" alt="Imagen 2">
-      <div class="carousel-caption">
-
- </div>
-    </div>
-    <div class="carousel-item">
-      <img src="Resources/3.jpg" alt="Imagen 3">
-      <div class="carousel-caption">
-
- </div>
-    </div>
-    <div class="carousel-item">
-      <img src="Resources/4.jpg" alt="Imagen 4">
-      <div class="carousel-caption">
-
- </div>
+    <div class="col-sm-8">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg">Fake Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      <br>
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+      <div class="fakeimg">Fake Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
     </div>
   </div>
-
-  <!-- Left and right controls -->
-  <a class="carousel-control-prev" href="#demo" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#demo" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
-
 </div>
+
 
 <div id="popup1" class="overlay">
   <div class="loginpopup">
@@ -105,10 +82,10 @@
       <center>
       <label>Login AMS</label>
     </center>
-      <label for="User">Alias:</label>
-      <input type="text" class="form-control" id = "User" placeholder="Ingrese su usuario" name="User" required/>
+      <label for="User">Usuario:</label>
+      <input type="text" class="form-control" id = "User" placeholder="Ingrese su usuario" name="User"/>
       <label for="Pass">Contraseña:</label>
-      <input type="password" class="form-control" id = "Pass"  placeholder="Ingrese su contraseña" name="Pass" required/>
+      <input type="password" class="form-control" id = "Pass"  placeholder="Ingrese su contraseña" name="Pass"/>
       <br />
       <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
       <a href="" class="btn btn-primary">Cerrar</a>
@@ -116,7 +93,6 @@
     </form>
   </div>
 </div>
-
 
 <div id="popup2" class="overlay">
   <div class="loginpopup2">
