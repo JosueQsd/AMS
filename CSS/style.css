@@ -1,5 +1,5 @@
 body {margin:0;
-background-color: #ccdfff;
+background-color: #fff;
 }
 
 .barranav {
@@ -69,8 +69,8 @@ margin-left: -150px;
 margin-top: -150px;
   width: 25%;
   height: 45%;
-  background-color: #d6dcdc;
-  color: #007bff;
+  background-color: #292c80;
+  color: #fff;
   box-shadow: 0em 0em 12px 6px #334748;
   font-weight:600;
   border-radius: 15px;
@@ -94,8 +94,8 @@ margin-left: -150px;
 margin-top: -150px;
   width: 25%;
   height: 85%;
-  background-color: #d6dcdc;
-  color: #007bff;
+  background-color: #292c80;
+  color: #fff;
   box-shadow: 0em 0em 12px 6px #334748;
   font-weight:600;
   border-radius: 15px;
