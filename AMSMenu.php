@@ -24,7 +24,7 @@ header('location: AMSY/MenuSpecial.php');
 
 }else{
   echo ("<script LANGUAGE='JavaScript'>
-    window.location.href='http://10.20.60.158/AMS';
+    window.location.href='http://10.20.60.158:8080/AMS';
     </script>");
   exit();
 }

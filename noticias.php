@@ -80,25 +80,27 @@
   <div class="loginpopup">
     <form action="Login.php" method = "Post">
       <center>
-      <label>Login AMS</label>
+      <label style = "margin-left: 100px;">Login AMS</label><a href="" style = "margin-left: 80px; color: #fff;"><i class="material-icons">clear</i></a>
     </center>
-      <label for="User">Usuario:</label>
-      <input type="text" class="form-control" id = "User" placeholder="Ingrese su usuario" name="User"/>
+      <label for="User">Alias:</label>
+      <input type="text" class="form-control" id = "User" placeholder="Ingrese su usuario" name="User" required/>
       <label for="Pass">Contraseña:</label>
-      <input type="password" class="form-control" id = "Pass"  placeholder="Ingrese su contraseña" name="Pass"/>
+      <input type="password" class="form-control" id = "Pass"  placeholder="Ingrese su contraseña" name="Pass" required/>
       <br />
-      <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-      <a href="" class="btn btn-primary">Cerrar</a>
+      <center>
+      <button type="submit" class="btn btn-light">Iniciar Sesión</button>
+    </center>
       <br />
     </form>
   </div>
 </div>
 
+
 <div id="popup2" class="overlay">
   <div class="loginpopup2">
     <form action="RegU.php" method = "Post">
       <center>
-      <label>Registro AMS</label>
+      <label style = "margin-left: 90px;">Registro AMS</label><a href="" style = "margin-left: 60px; color: #fff;"><i class="material-icons">clear</i></a>
     </center>
       <label for="User">Numero de Cedula:</label>
       <input type="text" class="form-control" id = "SerialNumberr" placeholder="Ingrese su # de Cedula" name="SerialNumber" required/>
@@ -113,8 +115,9 @@
       <label for="Pass">Codigo Empresarial</label>
       <input type="password" class="form-control" id = "CodEmp"  placeholder="Ingrese el codigo privado empresarial" name="CodEmp" required/>
       <br />
-      <button type="submit" class="btn btn-primary">Registrarse</button>
-      <a href="" class="btn btn-primary">Cerrar</a>
+      <center>
+      <button type="submit" class="btn btn-light">Registrarse</button>
+    </center>
       <br />
     </form>
   </div>
