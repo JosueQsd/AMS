@@ -8,8 +8,8 @@ function Admin (){
   xmlhttp.open("GET","AMSZ/MenuAdmin.php", true);
   xmlhttp.send();
 
-
-var intevalo = setInterval('load_Admin ()',20000);
+}
+/*var intevalo = setInterval('load_Admin ()',20000);
 }
 function load_Admin (){
 xmlhttp=new XMLHttpRequest();
@@ -70,4 +70,4 @@ function load_Special (){
   }
   xmlhttp.open("GET","AMSY/MenuSpecial.php", true);
   xmlhttp.send();
-}
+}*/
