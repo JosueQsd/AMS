@@ -9,7 +9,7 @@ ALTER TABLE AMS_Proyectos AUTO_INCREMENT = 1;
 INSERT INTO AMS_Proyectos (NomProy,CodEmp) values ('ProyAMS','770eb2d5a1541d54d52b3caa9f5f08a761917d30');
 
 
-create table AMS_TipActs ( 
+create table AMS_TipActs (
 NTipoAct int NOT NULL auto_increment,
 TipoAct varchar (255),
 primary key (NTipoAct));
@@ -40,21 +40,22 @@ GarantAct varchar (5),
 ActIngDate varchar (100),
 ActFinDate varchar (100),
 IDProy int(11) NOT NULL,
-PRIMARY KEY (SerialNumber), 
+PRIMARY KEY (SerialNumber),
 FOREIGN KEY (TipoAct) REFERENCES AMS_TipActs(NTipoAct),
 FOREIGN KEY (IDProy) REFERENCES AMS_Proyectos(IDProy));
 
 
-CREATE TABLE AMS_GenActivos 
-( 
-SerialNumber varchar(255) NOT NULL,  
+CREATE TABLE AMS_GenActivos
+(
+SerialNumber varchar(255) NOT NULL,
 TipoAct int NOT NULL,
-IDProy int(11) NOT NULL, 
-PRIMARY KEY (SerialNumber), 
+Ubicacion varchar(255),
+IDProy int NOT NULL,
+PRIMARY KEY (SerialNumber),
 FOREIGN KEY (TipoAct) REFERENCES AMS_TipActs(NTipoAct),
 FOREIGN KEY (IDProy) REFERENCES AMS_Proyectos(IDProy));
 
-INSERT INTO AMS_GenActivos values ('AMSX','1','1');
+INSERT INTO AMS_GenActivos values ('AMSX','1','','1');
 
 
 create table AMS_Adminusers (
@@ -96,5 +97,3 @@ Primary key (SerialNumber),
 FOREIGN KEY (IDProy) REFERENCES AMS_Proyectos(IDProy));
 
 INSERT INTO AMS_SpecialUsers values ('AMSY','AMS Especialista','AMS-SPECIAL','c13ddfb2bbb4d880b276934dea15bfb6352bc40f','ryvqsd@gmail.com','1');
-
-
